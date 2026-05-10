@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portafolio ASIR | Tu Nombre</title>
+<title>Portafolio ASIR | Fran Bastida</title>
 
 <style>
 
@@ -37,6 +37,10 @@
 --btn-text: #ffffff;
 }
 
+html, body {
+height: 100%;
+}
+
 body {
 font-family: 'Segoe UI', system-ui, sans-serif;
 line-height: 1.6;
@@ -46,6 +50,11 @@ margin: auto;
 padding: 20px;
 background-color: var(--bg);
 transition: background-color 0.3s, color 0.3s;
+
+/* FIX FOOTER ABAJO */
+display: flex;
+flex-direction: column;
+min-height: 100vh;
 }
 
 /* BOTÓN MODO OSCURO */
@@ -185,6 +194,11 @@ text-decoration: none;
 margin-right: 15px;
 }
 
+/* EMPUJA EL FOOTER ABAJO */
+section {
+flex: 1;
+}
+
 </style>
 </head>
 
@@ -273,15 +287,26 @@ monitorización continua, análisis de eventos de seguridad y automatización de
 </p>
 
 <div class="links-proyecto">
-<a href="#" onclick="abrirPDF('docs/Simulación de una arquitectura de sistemas para pequeña empresa con Active Directory, servicios Linux, monitorización y automatización de incidencias.pdf')">📄 Ver Memoria Técnica</a>
+<a href="#" onclick="abrirPDF('docs/informe_infraestructura.pdf')">📄 Ver Memoria Técnica</a>
 </div>
 
 </div>
 
+<div class="card">
+<h3>Diseño de Red Corporativa</h3>
+<p>
+Simulación de red empresarial con segmentación VLAN y políticas de seguridad en entornos virtualizados.
+</p>
 
+<div class="links-proyecto">
+<a href="#" onclick="abrirPDF('docs/practica_redes.pdf')">📄 Ver Memoria Técnica</a>
+</div>
+</div>
 
+</div>
+</section>
 
-<footer style="text-align:center;margin-top:60px;padding-bottom:40px;color:#888;">
+<footer style="text-align:center;margin-top:auto;padding-bottom:40px;color:#888;">
 <p>&copy; 2026 Portafolio Profesional ASIR</p>
 </footer>
 
@@ -309,9 +334,7 @@ document.documentElement.setAttribute('data-theme', 'light');
 localStorage.setItem('theme', 'light');
 toggle.innerHTML = '☀️';
 tooltip.innerHTML = 'Modo Oscuro';
-}
-
-else {
+} else {
 document.documentElement.setAttribute('data-theme', 'dark');
 localStorage.setItem('theme', 'dark');
 toggle.innerHTML = '🌙';
