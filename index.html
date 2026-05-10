@@ -50,8 +50,6 @@ margin: auto;
 padding: 20px;
 background-color: var(--bg);
 transition: background-color 0.3s, color 0.3s;
-
-/* FIX FOOTER ABAJO */
 display: flex;
 flex-direction: column;
 min-height: 100vh;
@@ -194,7 +192,7 @@ text-decoration: none;
 margin-right: 15px;
 }
 
-/* EMPUJA EL FOOTER ABAJO */
+/* EMPUJA FOOTER ABAJO */
 section {
 flex: 1;
 }
@@ -273,34 +271,23 @@ Además, se han desplegado plataformas en contenedores Docker como <strong>GLPI<
 
 <p>
 <strong>GLPI</strong> se ha configurado como plataforma de gestión de incidencias y soporte técnico,
-integrada con <strong>Active Directory de Windows Server</strong> mediante <strong>LDAP</strong> para la gestión centralizada de usuarios.
+integrada con <strong>Active Directory de Windows Server</strong> mediante <strong>LDAP</strong>.
 </p>
 
 <p>
 En seguridad se ha implementado <strong>Wazuh (SIEM/XDR)</strong> para monitorización y análisis de eventos,
-junto con <strong>Suricata (IDS)</strong> para detección de tráfico sospechoso y análisis de red en tiempo real.
+junto con <strong>Suricata (IDS)</strong> para detección de tráfico sospechoso en la red.
 </p>
 
 <p>
 El proyecto busca recrear una infraestructura empresarial moderna, integrando administración centralizada,
-monitorización continua, análisis de eventos de seguridad y automatización de incidencias.
+monitorización continua y análisis de eventos de seguridad.
 </p>
 
 <div class="links-proyecto">
 <a href="#" onclick="abrirPDF('docs/informe_infraestructura.pdf')">📄 Ver Memoria Técnica</a>
 </div>
 
-</div>
-
-<div class="card">
-<h3>Diseño de Red Corporativa</h3>
-<p>
-Simulación de red empresarial con segmentación VLAN y políticas de seguridad en entornos virtualizados.
-</p>
-
-<div class="links-proyecto">
-<a href="#" onclick="abrirPDF('docs/practica_redes.pdf')">📄 Ver Memoria Técnica</a>
-</div>
 </div>
 
 </div>
